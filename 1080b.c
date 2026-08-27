@@ -1,3 +1,13 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Algortimo e Estrutura de Dados 2026S1
+Nome        : Luiz Felipe Gonzaga
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/1080
+Data        : 27/08/2026
+Objetivo    : Ler 100 valores inteiros e positivos, mostrar o maior e seu índice (versão com alocação dinâmica).
+Dificuldade : <<<Qual foi o principal desafio neste problema?>>>
+Uso de IA   : <<<Se usou, descreva brevemente o uso de IA na solução>>>
+-------------------------------------------------------------------------- */
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
