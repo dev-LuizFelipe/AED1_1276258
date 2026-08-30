@@ -4,7 +4,7 @@ Nome        : Luiz Felipe Gonzaga
 Linguagem   : C
 Problema    : https://judge.beecrowd.com/pt/problems/view/1110
 Data        : 30/08/2026
-Objetivo    : Descartar a carta do topo, colocar a debaixo por último e repetir o processo até sobrar 1 carta.
+Objetivo    : Descartar a carta do topo, colocar a de baixo por último e repetir o processo até sobrar 1 carta.
 Dificuldade : <<<Qual foi o principal desafio neste problema?>>> Implementar a lógica de fila com dois ponteiros de controle
 (head/tail) usando alocação dinâmica, especialmente garantir a formatação exata da saída
 Uso de IA   : <<<Se usou, descreva brevemente o uso de IA na solução>>> Guiou a construção das funções de fila (enfileirar/desenfileirar) 
