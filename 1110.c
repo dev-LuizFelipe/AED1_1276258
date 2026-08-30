@@ -16,8 +16,8 @@ typedef struct no{
     int conteudo;
     struct no *prox;
 } Tno;
-void enfileirar(int x, Tno **head, Tno **tail);
-int desenfileirar(Tno **head, Tno **tail);
+void enfileirar(int x, Tno **head, Tno **tail); // adiciona um novo nó no final e transforma ele em um tail
+int desenfileirar(Tno **head, Tno **tail); // salva as informações da carta que será removida e "puxa a fila" com free(*head) seguido de *head = enedereco;
 
 int main(){
     int n,i, carta, carta_descartada;
