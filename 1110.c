@@ -55,12 +55,12 @@ int main(){
     return 0;
 }
 
-void enfileirar(int x, Tno **head, Tno **tail){
+void enfileirar(int x, Tno **head, Tno **tail){ //usamos ponteiros duplos para modificar a variável original ("a do main").
     Tno *novo;
-    novo = malloc(sizeof(Tno));
-    novo->conteudo = x;
-    novo->prox = NULL;
-    if (*head == NULL){
+    novo = malloc(sizeof(Tno)); // novo nó
+    novo->conteudo = x; // conteudo do novo nó é a carta 
+    novo->prox = NULL; // o novo nó vira o tail 
+    if (*head == NULL){ // se não tiver nada na fila, head e tail recebem o novo nó.
         *head = novo;
         *tail = novo;
     }else{
@@ -72,11 +72,11 @@ void enfileirar(int x, Tno **head, Tno **tail){
 int desenfileirar(Tno **head, Tno **tail){
     int dado;
     Tno *endereco;
-    dado = (*head)->conteudo;
-    endereco = (*head)->prox;
-    free(*head);
-    *head = endereco; 
-    if(endereco == NULL){
+    dado = (*head)->conteudo; // recebe o número da carta a ser descartada.
+    endereco = (*head)->prox;  // recebe o aonde o nó com a carta que será descartada aponta.
+    free(*head); 
+    *head = endereco; // head recebe endereço para não ocorrer vazamento de memória 
+    if(endereco == NULL){ // se a carta descartada era o último nó da fila, então tail também recebe endereco para ficar igual ao inicio com head e tail null. 
         *tail = endereco;
     }
     return dado;  
