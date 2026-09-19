@@ -41,9 +41,9 @@ int main(){
 void empilhar(char y, Tno *p){ // empilha os parênteses
     Tno *novo;
     novo = malloc(sizeof(Tno));
-    novo ->conteudo = y;
-    novo ->prox = p->prox;
-    p ->prox = novo;
+    novo ->conteudo = y; //novo nó recebe o parenteses 
+    novo ->prox = p->prox; // novo nó passa a apontar para o antigo topo da pilha
+    p ->prox = novo; // atualizamos o topo
 }
 int desempilhar(Tno *p){ // descarta os parênteses empilhados no topo, se a pilha não estiver vazia. 
     if (p->prox == NULL) return 0; //vazia
@@ -53,7 +53,7 @@ int desempilhar(Tno *p){ // descarta os parênteses empilhados no topo, se a pil
         lixo = p->prox;
         x = lixo->conteudo;
         p->prox = lixo->prox;
-        free(lixo);
+        free(lixo); // descarta o topo, só depois de deixar o próximo do topo atual como futuro topo após o descarte
         return x; // retorna o número ASCII do parênteses.
     } 
 }
@@ -75,9 +75,9 @@ void limpar (Tno *head){
     Tno *aux;
     p = head->prox;
     while (p != NULL){
-        aux = p->prox;
+        aux = p->prox; // salva o endereço do proximo nó antes de liberar o atual
         free(p);
-        p = aux;
+        p = aux; // avança para o próximo nó que esta salvo em aux
     }
     head->prox = NULL; // evita causar o double free, sem ele head vai apontar para um conteudo morto.
 }
