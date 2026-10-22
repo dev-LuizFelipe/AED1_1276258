@@ -14,21 +14,21 @@ revisar meu próprio código. Não forneceu a solução
 #include <stdio.h>
 #include<stdlib.h>
 #include<string.h>
-typedef struct arvore{
+typedef struct no{
     char conteudo;
-    struct arvore *esq;
-    struct arvore *dir;
-} Tarvore;
+    struct no *esq;
+    struct no *dir;
+} Tno;
 
-Tarvore *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posPrefixa);
-void edr(Tarvore *r);
-void limpar(Tarvore *r);
+Tno *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posPrefixa);
+void edr(Tno *r);
+void limpar(Tno *r);
 
 int main(){
     char prefixa[53]; char infixa[53];
     int c, casos, n;
     c=0;
-    Tarvore *aux;
+    Tno *aux;
     scanf("%d", &casos);
     while(c != casos){
         scanf("%d %s %s", &n, prefixa, infixa);
@@ -41,7 +41,7 @@ int main(){
     return 0;
 }
 
-void edr(Tarvore *r){
+void edr(Tno *r){
     if(r!=NULL){
         edr (r->esq);
         edr(r->dir);
@@ -50,7 +50,7 @@ void edr(Tarvore *r){
 }
 
 
-Tarvore *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posPrefixa){
+Tno *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posPrefixa){
     if (inicio > fim) return NULL;
     
     int i, qtd_esq;
@@ -59,7 +59,7 @@ Tarvore *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posP
     for (i = inicio; i<= fim && infixa[i] != raiz; i++); // acha qual letra é a raiz
     
     qtd_esq = i - inicio; // quantidade de nós na sub esquerda
-    Tarvore *novo = malloc(sizeof(Tarvore));
+    Tno *novo = malloc(sizeof(Tno));
     
     if(novo == NULL) return NULL;
     novo->conteudo = raiz;
@@ -67,7 +67,7 @@ Tarvore *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posP
     novo->dir = reconstruir(prefixa, infixa, i+1, fim, posPrefixa + qtd_esq + 1); //preenche na direita  
     return novo;
 }
-void limpar(Tarvore *r) {
+void limpar(Tno *r) {
     if (r != NULL) {
         limpar(r->esq);
         limpar(r->dir);
