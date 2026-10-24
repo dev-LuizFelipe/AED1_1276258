@@ -2,7 +2,7 @@
 Disciplina  : Algortimo e Estrutura de Dados 2026S1
 Nome        : Luiz Felipe Gonzaga
 Linguagem   : C
-Problema    : https://judge.beecrowd.com/pt/problems/view/1383
+Problema    : https://judge.beecrowd.com/pt/problems/view/1195
 Data        : 24/10/2026
 Objetivo    : Mostrar a formatção de uma árvore binária infixa, prefixa e posfixamente em diferentes casos teste.
 Dificuldade : <<<Qual foi o principal desafio neste problema?>>> A dificuldade foi formatar a saída corretamente e um else mal ligado em 
