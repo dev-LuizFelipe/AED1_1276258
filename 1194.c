@@ -2,7 +2,7 @@
 Disciplina  : Algortimo e Estrutura de Dados 2026S1
 Nome        : Luiz Felipe Gonzaga
 Linguagem   : C
-Problema    : https://judge.beecrowd.com/pt/problems/view/1383
+Problema    : https://judge.beecrowd.com/pt/problems/view/1194
 Data        : 22/10/2026
 Objetivo    : Receber textos no formato infixo e prefixo e devolver o texto no formato posfixo.
 Dificuldade : <<<Qual foi o principal desafio neste problema?>>> A dificuldade maior foi sobre organizar os parâmetros recebidos para 
