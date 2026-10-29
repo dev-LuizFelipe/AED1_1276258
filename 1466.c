@@ -4,9 +4,8 @@ Nome        : Luiz Felipe Gonzaga
 Linguagem   : C
 Problema    : https://judge.beecrowd.com/pt/problems/view/1466
 Data        : 28/10/2026
-Objetivo    : Inserir N valores em uma árvore binária de busca e imprimir seus
-              nós por nível (BFS), da esquerda para a direita, usando uma fila
-              implementada com vetor de ponteiros e dois índices (ini e fim).
+Objetivo    : Inserir N valores em uma árvore binária de busca e imprimir seus nós por nível (BFS), da esquerda para a direita, 
+usando uma fila implementada com vetor de ponteiros e dois índices (ini e fim).
 Dificuldade : <<<Qual foi o principal desafio neste problema?>>> Entender o que deveria ser enfileirado (filhos do nó visitado)
 e acertar a formatação pedida.
 Uso de IA   : <<<Se usou, descreva brevemente o uso de IA na solução>>> IA usada para corrigir a formatação 
