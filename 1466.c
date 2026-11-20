@@ -4,8 +4,9 @@ Nome        : Luiz Felipe Gonzaga
 Linguagem   : C
 Problema    : https://judge.beecrowd.com/pt/problems/view/1466
 Data        : 28/10/2026
-Objetivo    : Inserir N valores em uma árvore binária de busca e imprimir seus nós por nível (BFS), da esquerda para a direita, 
-usando uma fila implementada com vetor de ponteiros e dois índices (ini e fim).
+Objetivo    : Inserir N valores em uma árvore binária de busca e imprimir seus
+              nós por nível (BFS), da esquerda para a direita, usando uma fila
+              implementada com vetor de ponteiros e dois índices (ini e fim).
 Dificuldade : <<<Qual foi o principal desafio neste problema?>>> Entender o que deveria ser enfileirado (filhos do nó visitado)
 e acertar a formatação pedida.
 Uso de IA   : <<<Se usou, descreva brevemente o uso de IA na solução>>> IA usada para corrigir a formatação 
@@ -102,3 +103,34 @@ void nivel(Tno *raiz){
 
     }
 }
+
+/*
+void printar(Tno *r){
+    if (r != NULL){
+        printar(r->esq);
+        printf("Conteúdo:%d\n", r->conteudo);
+        printar(r->dir);
+    }
+} */
+
+/*  versão de inserir sem criar_no e sem assumir que a raiz existe na main
+Tno* inserir(Tno *raiz, int x){
+    if(raiz == NULL){
+        Tno *novo = malloc(sizeof(Tno));
+        if(novo != NULL){
+            novo->conteudo = x;
+            novo->esq = NULL;
+            novo->dir = NULL;
+        }
+        return novo;
+    }
+
+    if(x < raiz->conteudo){
+        raiz->esq = inserir(raiz->esq, x);
+    } else if(x > raiz->conteudo){
+        raiz->dir = inserir(raiz->dir, x);
+    }
+
+    return raiz;
+}
+*/
