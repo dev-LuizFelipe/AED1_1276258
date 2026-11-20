@@ -63,8 +63,10 @@ Tno *reconstruir(char prefixa[], char infixa[],int inicio, int fim, int posPrefi
     
     if(novo == NULL) return NULL;
     novo->conteudo = raiz;
-    novo->esq = reconstruir(prefixa, infixa, inicio, i-1, posPrefixa +1); //preenche na esquerda
-    novo->dir = reconstruir(prefixa, infixa, i+1, fim, posPrefixa + qtd_esq + 1); //preenche na direita  
+    novo->esq = reconstruir(prefixa, infixa, inicio, i-1, posPrefixa +1); 
+    novo->dir = reconstruir(prefixa, infixa, i+1, fim, posPrefixa + qtd_esq + 1); 
+    //i-1 como fim, pois queremos só os valores da esquerda(todos antes de i). posiPrefixa + 1, pois o próximo dele já a "subraiz esquerda"  (esq)
+    //i+1, pois após o val_raiz (i) são os valores da direita. para achar a posiPrefixa da direita temos que pular todos da esquerda (qtd + 1) (dir)
     return novo;
 }
 void limpar(Tno *r) {
